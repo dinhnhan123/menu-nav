@@ -1,0 +1,128 @@
+
+#container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #header-menu-navigation{
+    background-color: #C94493;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul#main-menu{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+  }
+  ul#main-menu li{
+   display: block;
+   position: relative;
+  }
+  ul#main-menu li a{
+   text-decoration: none;
+   padding: 15px 34px;
+   display: block;
+   color: #ffffff;
+   font-size: 15px;
+  }
+  ul#main-menu li a:hover{
+  background-color: #b30f71;
+  }
+  ul#main-menu  ul.sub-menu{
+  position: absolute;
+  background-color: #C94493;
+  width: 300px;
+  padding: 20px 0px;
+  list-style: none;
+  border: 1px solid #b30f71;
+  display: none;
+  
+  
+  }
+  ul#main-menu ul.sub-menu a{
+    padding: 8px 34px;
+    border-bottom: 1px solid #910f5d;
+    font-size: 15px;
+    color: #ffffff;
+    text-transform: capitalize;
+   
+  }
+  ul#main-menu li ul.sub-menu a:hover{
+    background-color: #b30f71;
+    font-weight: 600;
+  }
+  ul#main-menu li ul.sub-menu li:last-child a{
+    border: none;
+  }
+  ul#main-menu ul.sub-menu ul.sub-menu {
+    left: 299px;
+    top: -15px;
+    display: none;
+  }
+  ul#main-menu li:hover>ul.sub-menu{
+    display: block;
+  }
+  /* thiết lập border khi hover */
+  ul#main-menu>li>a{
+    position: relative;
+  }
+  ul#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background-color: #3ea1a1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  ul#main-menu>li:hover>a::before{
+    width: 100%;
+  }
+  ul#main-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f107";
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 18px 0px;
+  
+  }
+  ul#main-menu .sub-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f105";
+    color: #ffffff;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    padding: 8px 0px;
+  
+  }
+  ul#main-menu .sub-menu li:hover>a{
+    color: #ffffff;
+  }
+  ul#main-menu .sub-menu li.has-child:hover::after{
+    color: #ffffff;
+  }
+  .user-cart {
+    padding-right: 52px;
+  }
+  .user-cart a {
+    text-decoration: none;
+  }
+  .user-cart a .fa-solid{
+    padding-left: 6px;
+    padding-right: 6px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+  }
+ 
